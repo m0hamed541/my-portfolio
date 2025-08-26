@@ -8,7 +8,7 @@
     z-index: 9999;
     transform: translate(-50%, -50%);
     transition: background-color 0.2s ease;
-    border: 2px solid #ffffffcc;
+    border: 2px solid var(--color-primary);
     pointer-events: none;
     cursor: none;
 

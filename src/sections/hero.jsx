@@ -2,7 +2,7 @@ import React from 'react';
 import { ChevronDown, Home, User, Code, Briefcase, MessageCircle, Layers } from "lucide-react";
 import { FloatingButton } from '../components/FloattingButton';
 import { Button } from '../components/Button.jsx';
-import { headline, subheadline } from '../globals/variables.js';
+import { headline, subheadline } from '../globals/variables.jsx';
 
 const HeroSection = () => {
   return (

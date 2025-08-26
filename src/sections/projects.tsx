@@ -3,6 +3,7 @@ import { ProjectCard } from '../components/ProjectCard';
 import { ProjectsSelector } from '../components/ProjectsSelector';
 import { projectSections } from '../data/projects';
 import { Code } from 'lucide-react';
+import { SectionHeader } from '../components/sectionHeader';
 
 const ProjectsSection = () => {
   const [activeSection, setActiveSection] = useState('system-design');
@@ -12,24 +13,10 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects_section" className="relative min-h-screen py-12 sm:py-16 md:py-20 bg-primary-background overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-accent/20 via-purple-500/20 to-green-500/20"></div>
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary-accent/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-green-500/5 rounded-full blur-3xl"></div>
-      </div>
+
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-text mb-4 sm:mb-6">
-            Featured Projects
-          </h2>
-          <p className="text-lg sm:text-xl text-primary-text-secondary max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-            Explore my latest work across different domains of software engineering and system design
-          </p>
-        </div>
+        <SectionHeader header="Featured Projects" subheader="Explore my latest work across different domains of software engineering and system design" />
 
         {/* Projects Selector */}
         <ProjectsSelector 

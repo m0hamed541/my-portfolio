@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '../components/Button';
+import { SectionHeader } from '../components/sectionHeader';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -35,15 +36,8 @@ const ContactSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-primary-background overflow-hidden py-12 sm:py-16 md:py-20" id="contact">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-text mb-4 sm:mb-6 tracking-tight text-left">
-            Get In Touch
-          </h2>
-          <p className="text-lg sm:text-xl text-primary-text-secondary max-w-3xl leading-relaxed text-left">
-            Ready to collaborate on your next project? Let's discuss how we can bring your ideas to life.
-          </p>
-        </div>
-        
+
+        <SectionHeader header="Get In Touch" subheader="Ready to collaborate on your next project? Let's discuss how we can bring your ideas to life." />
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
           {/* Contact Form */}
           <div className="animate-slide-in">
@@ -115,7 +109,7 @@ const ContactSection = () => {
                     placeholder="Tell me about your project or how I can help..."
                   />
                 </div>
-                <Button onClick={() => {}} className='w-full flex-row items-center justify-center gap-2'> <Send className="w-4 h-4" />Send Message</Button>
+                <Button onClick={() => {}} className={"w-full flex-row items-center justify-center gap-2"}> <Send className="w-4 h-4" /> Message</Button>
               </form>
             </div>
           </div>
