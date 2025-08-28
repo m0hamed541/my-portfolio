@@ -3,7 +3,7 @@ import { SectionHeader } from "../components/sectionHeader";
 
 const AboutSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-primary-background overflow-hidden py-12 sm:py-16 md:py-20">
+    <section id="about_section" className="relative min-h-screen flex items-center justify-center bg-primary-background overflow-hidden py-12 sm:py-16 md:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <SectionHeader header="About Me" subheader="Building scalable, reliable, and containerized solutions that power the future of cloud infrastructure" />
 

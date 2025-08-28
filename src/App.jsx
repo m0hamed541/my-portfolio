@@ -8,6 +8,9 @@ import TechStack from "./sections/techStack.jsx";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 function App() {
+
+  const isMobile = window.innerWidth <= 768;
+
   const mouse = {
     x: useMotionValue(0),
     y: useMotionValue(0),
@@ -34,23 +37,23 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("mousemove", handleCursor);
-    document.addEventListener("mouseenter", handleMouseEnter, true);
     return () => {
       window.removeEventListener("mousemove", handleCursor);
-      document.removeEventListener("mouseenter", handleMouseEnter, true);
     };
   }, []);
 
   return (
     <>
       {/* Custom Cursor */}
-      <motion.div
-        className="cursor"
-        style={{
-          x: smoothMouse.x,
-          y: smoothMouse.y,
-        }}
-      />
+      {!isMobile && (
+        <motion.div
+          className="cursor"
+          style={{
+            x: smoothMouse.x,
+            y: smoothMouse.y,
+          }}
+        />
+      )}
 
       {/* Page Sections */}
       <HeroSection />

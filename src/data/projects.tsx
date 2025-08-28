@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 
 export interface Project {
+  id: number;
   title: string;
   description: string;
   features: string[];
@@ -29,6 +30,7 @@ export const projectSections: ProjectSection[] = [
     description: 'Designing scalable, reliable, and efficient system architectures',
     projects: [
       {
+        id: 0,
         title: 'Distributed System Architecture',
         description: 'High-performance distributed system design with microservices, load balancing, and fault tolerance mechanisms.',
         features: ['Service mesh', 'Load balancing', 'Circuit breakers'],
@@ -37,12 +39,31 @@ export const projectSections: ProjectSection[] = [
         link: 'https://github.com/m0hamed541/distributed-system'
       },
       {
+        id: 1,
         title: 'Database Design & Optimization',
         description: 'Advanced database architecture with sharding, replication, and query optimization strategies.',
         features: ['Database sharding', 'Replication', 'Query optimization'],
         icon: <DatabaseIcon className="w-8 h-8" />,
         accentColor: 'text-blue-400',
         link: 'https://github.com/m0hamed541/database-design'
+      },
+      {
+        id: 2,
+        title: 'API Gateway Implementation',
+        description: 'Robust API gateway design with authentication, rate limiting, and caching strategies.',
+        features: ['API gateway', 'Authentication', 'Rate limiting'],
+        icon: <Server className="w-8 h-8" />,
+        accentColor: 'text-green-400',
+        link: 'https://github.com/m0hamed541/api-gateway'
+      },
+      {
+        id: 3,
+        title: 'Service Mesh Implementation',
+        description: 'Advanced service mesh architecture for microservices with traffic management, security, and observability features.',
+        features: ['Service mesh', 'Traffic management', 'Security policies'],
+        icon: <Container className="w-8 h-8" />,
+        accentColor: 'text-indigo-400',
+        link: 'https://github.com/m0hamed541/service-mesh'
       }
     ]
   },
@@ -53,6 +74,7 @@ export const projectSections: ProjectSection[] = [
     description: 'Building robust cloud-native solutions across multiple platforms',
     projects: [
       {
+        id: 0,
         title: 'Multi-Cloud Infrastructure',
         description: 'Hybrid cloud solution spanning AWS, Azure, and GCP with unified management and monitoring.',
         features: ['Multi-cloud deployment', 'Unified monitoring', 'Cost optimization'],
@@ -61,6 +83,7 @@ export const projectSections: ProjectSection[] = [
         link: 'https://github.com/m0hamed541/multi-cloud'
       },
       {
+        id: 1,
         title: 'Container Orchestration Platform',
         description: 'Enterprise-grade Kubernetes platform with advanced networking, security, and monitoring capabilities.',
         features: ['Kubernetes', 'Service mesh', 'Security policies'],
@@ -77,6 +100,7 @@ export const projectSections: ProjectSection[] = [
     description: 'Solving complex technical challenges with innovative approaches',
     projects: [
       {
+        id: 0,
         title: 'Algorithm Optimization Engine',
         description: 'High-performance algorithm library with optimization techniques for complex computational problems.',
         features: ['Algorithm optimization', 'Performance analysis', 'Benchmarking'],
@@ -85,6 +109,7 @@ export const projectSections: ProjectSection[] = [
         link: 'https://github.com/m0hamed541/algo-engine'
       },
       {
+        id: 1,
         title: 'System Performance Analyzer',
         description: 'Comprehensive system analysis tool for identifying bottlenecks and optimizing resource utilization.',
         features: ['Performance profiling', 'Bottleneck detection', 'Resource optimization'],
@@ -101,6 +126,7 @@ export const projectSections: ProjectSection[] = [
     description: 'Developing full-stack applications with modern technologies',
     projects: [
       {
+        id: 0,
         title: 'Full-Stack Web Application',
         description: 'Modern web application with React frontend, Node.js backend, and PostgreSQL database.',
         features: ['React', 'Node.js', 'PostgreSQL', 'Docker'],
@@ -109,6 +135,7 @@ export const projectSections: ProjectSection[] = [
         link: 'https://github.com/m0hamed541/fullstack-app'
       },
       {
+        id: 1,
         title: 'API Gateway & Services',
         description: 'Scalable API gateway with authentication, rate limiting, and service discovery capabilities.',
         features: ['API gateway', 'Authentication', 'Rate limiting'],

@@ -1,8 +1,8 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 
-const Footer = () => {
+const FooterSection = () => {
   return (
-    <footer className="bg-primary-background text-primary-text py-8 sm:py-12" id="footer_section">
+    <section className="bg-primary-background text-primary-text py-8 sm:py-12" id="footer_section">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0 text-center md:text-left">
@@ -47,8 +47,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </section>
   );
 };
 
-export default Footer;
+export default FooterSection;

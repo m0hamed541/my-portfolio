@@ -6,7 +6,7 @@ import { headline, subheadline } from '../globals/variables.jsx';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-background">
+    <section id="hero_section" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-background">
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6">
         <div className="animate-fade-in">
