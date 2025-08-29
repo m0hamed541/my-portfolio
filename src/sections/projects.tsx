@@ -4,7 +4,7 @@ import { ProjectsSelector } from "../components/ProjectsSelector";
 import { projectSections } from "../data/projects";
 import { Code } from "lucide-react";
 import { SectionHeader } from "../components/sectionHeader";
-import Swiper from "../components/ProjectSwiper";
+import ProjectsSwiper from "../components/ProjectSwiper";
 
 const ProjectsSection = () => {
   const [activeSection, setActiveSection] = useState("system-design");
@@ -46,7 +46,7 @@ const ProjectsSection = () => {
 
         {/* Projects Grid */}
         {isMobile ? (
-          <Swiper projects={currentProjects}/>
+          <ProjectsSwiper projects={currentProjects}/>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {currentProjects.map((project, index) => (
@@ -64,7 +64,7 @@ const ProjectsSection = () => {
         {/* Call to Action */}
         <div className="text-center mt-12 sm:mt-16 px-4 sm:px-0">
           <p className="text-primary-text-secondary mb-4 sm:mb-6">
-            Want to see more of my work?
+            {isMobile ? "swipe to see other projects" : "Check out my other projects!"}
           </p>
           <a
             href="https://github.com/m0hamed541"

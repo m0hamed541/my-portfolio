@@ -5,6 +5,7 @@ import { Button } from '../components/Button.jsx';
 import { headline, subheadline } from '../globals/variables.jsx';
 
 const HeroSection = () => {
+  const isMobile = window.innerWidth <= 768;
   return (
     <section id="hero_section" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-background">
       {/* Content */}
@@ -32,7 +33,9 @@ const HeroSection = () => {
       </div>
       
       {/* Scroll Indicator */}
-      <FloatingButton/>
+      {!isMobile && (
+        <FloatingButton/>
+      )}
     </section>
   );
 };
