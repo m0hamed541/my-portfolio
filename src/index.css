@@ -5,7 +5,7 @@
 @layer base {
   :root {
     /* Core Colors */
-    --color-background: #091a23;
+    --color-background: #101111; /* Core Colors */
     --color-background-secondary: #0d212c;
     --color-background-tertiary: #163341;
     
