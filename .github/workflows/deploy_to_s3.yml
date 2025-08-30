@@ -1,0 +1,16 @@
+name: deploy to s3
+run-name: ${{ github.actor }} is deploying to S3 🚀
+on: [push]
+jobs:
+  Install_deps:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm ci
+        working-directory: ${{ github.workspace }}
+      - run: echo "Dependencies installed successfully."
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run build
+      - run: echo "Build completed successfully."
+      - run: ls dist
