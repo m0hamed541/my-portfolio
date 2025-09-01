@@ -1,49 +1,18 @@
 import React, { useState } from "react";
 import { ProjectCard } from "../components/ProjectCard.jsx";
 import { ProjectsSelector } from "../components/ProjectsSelector";
-import { projectSections } from "../data/projects.jsx";
+import { projectSections, projects } from "../data/projects.jsx";
 import { Code } from "lucide-react";
 import { SectionHeader } from "../components/sectionHeader";
 import ProjectsSwiper from "../components/ProjectSwiper";
 import LightBox from "../components/ui/LightBox.jsx";
 
-const demo_project = {
-  id: 1,
-  title: "Multi-Tier Web Application on AWS",
-  category: "Full Stack Cloud Architecture",
-  duration: "3 months",
-  team: "Solo Project",
-  technologies: [
-    "AWS EC2",
-    "RDS",
-    "S3",
-    "CloudFront",
-    "Route 53",
-    "Auto Scaling",
-    "Load Balancer",
-  ],
-  overview:
-    "Designed and deployed a scalable, highly available web application using AWS services with automated CI/CD pipeline and infrastructure as code.",
-  features: [
-    "Auto-scaling EC2 instances across multiple AZs",
-    "RDS MySQL with automated backups and read replicas",
-    "CloudFront CDN for global content delivery",
-    "S3 for static asset storage with versioning",
-    "Application Load Balancer with health checks",
-    "Route 53 for DNS management and failover",
-  ],
-  challenges:
-    "Implementing zero-downtime deployments and optimizing costs while maintaining high availability.",
-  results:
-    "Achieved 99.9% uptime, reduced latency by 40%, and cut infrastructure costs by 25% through intelligent resource scaling.",
-  githubUrl: "https://github.com/yourusername/aws-web-app",
-  liveUrl: "https://your-project.com",
-};
+
 
 
 const ProjectsSection = () => {
   const [isProjectOpen, setIsProjectOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(demo_project);
+  const [selectedProject, setSelectedProject] = useState(null);
   const [activeSection, setActiveSection] = useState("cloud-architecting");
 
   const isMobile = window.innerWidth <= 768;
@@ -51,10 +20,15 @@ const ProjectsSection = () => {
   const currentSection = projectSections.find(
     (section) => section.id === activeSection
   );
-  const currentProjects = currentSection?.projects || [];
+  const currentProjects = projects.filter(
+    (project) => project.section === currentSection.id
+  );
+
+  console.log("Current Projects:", currentProjects);
 
   const openProject = (project) => {
     console.log("Open project:", project.title);
+    setSelectedProject(project);
     setIsProjectOpen(true);
   }
   return (
@@ -96,7 +70,7 @@ const ProjectsSection = () => {
                 className="animate-slide-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <ProjectCard {...project} onClick={() => openProject(project)} />
+                <ProjectCard title={project.title} overview={project.overview} onClick={() => openProject(project)} />
               </div>
             ))}
           </div>
@@ -118,7 +92,9 @@ const ProjectsSection = () => {
           </a>
         </div>
       </div>
-      <LightBox isOpen={isProjectOpen} setIsOpen={setIsProjectOpen} project={selectedProject} />
+      {selectedProject && (
+        <LightBox isOpen={isProjectOpen} setIsOpen={setIsProjectOpen} project={selectedProject} />
+      )}
     </section>
   );
 };

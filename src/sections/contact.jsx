@@ -6,7 +6,7 @@ import {
   Send,
   Github,
   Linkedin,
-  Twitter,
+  Instagram,
 } from "lucide-react";
 import { Button } from "../components/Button";
 import { SectionHeader } from "../components/sectionHeader";
@@ -71,7 +71,7 @@ const ContactSection = () => {
   return (
     <section
       className="relative min-h-screen flex items-center justify-center bg-primary-background overflow-hidden py-12 sm:py-16 md:py-20"
-      id="contact"
+      id="contact_section"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <SectionHeader
@@ -259,13 +259,13 @@ const ContactSection = () => {
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://twitter.com/mohamed_agougil"
+                    href="https://www.instagram.com/m0hamed._.451"
                     className="w-10 h-10 bg-secondary-background/20 hover:bg-primary-accent/20 rounded-lg flex items-center justify-center text-primary-text-secondary hover:text-primary-accent transition-all duration-300 hover:scale-110"
-                    aria-label="Twitter"
+                    aria-label="Instagram"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Twitter className="w-5 h-5" />
+                    <Instagram className="w-5 h-5" />
                   </a>
                 </div>
               </div>

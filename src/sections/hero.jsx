@@ -48,14 +48,34 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
-            <Button variant="hero-primary">Explore My Projects</Button>
-            <Button variant="hero-secondary">Contact Me</Button>
+            <Button
+              variant="hero-primary"
+              onClick={() =>
+                window.scrollTo({
+                  top: document.getElementById("projects_section").offsetTop,
+                  behavior: "smooth",
+                })
+              }
+            >
+              Explore My Projects
+            </Button>
+            <Button
+              variant="hero-secondary"
+              onClick={() =>
+                window.scrollTo({
+                  top: document.getElementById("contact_section").offsetTop,
+                  behavior: "smooth",
+                })
+              }
+            >
+              Contact Me
+            </Button>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      {!isMobile && <FloatingButton />}
+      <FloatingButton />
     </section>
   );
 };

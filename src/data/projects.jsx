@@ -1,110 +1,121 @@
-import { 
-  Code, Database, Cloud, Server, Globe, Shield, Zap, Cpu, Network, 
-  Database as DatabaseIcon, Brain, Monitor, Lock, Container, 
-  GitBranch, BarChart3, Target, Settings, Wifi, Rocket, Code2
-} from 'lucide-react';
+import {
+  Code,
+  Database,
+  Cloud,
+  Server,
+  Globe,
+  Shield,
+  Zap,
+  Cpu,
+  Network,
+  Database as DatabaseIcon,
+  Brain,
+  Monitor,
+  Lock,
+  Container,
+  GitBranch,
+  BarChart3,
+  Target,
+  Settings,
+  Wifi,
+  Rocket,
+  Code2,
+} from "lucide-react";
 
-export const projectSections= [
+export const projects = [
   {
-    id: 'system-design',
-    label: 'System Design',
+    id: 2,
+    section: "cloud-architecting",
+    title: "Personal Portfolio & System Design Showcase",
+    category: "Frontend Development",
+    duration: "2 weeks",
+    team: "Solo Project",
+    technologies: [
+      "AWS",
+      "GitHub Actions",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    overview:
+      "Built a modern, AWS deployed interactive portfolio website showcasing system design expertise with advanced animations, and responsive design patterns.",
+    features: [
+      "Custom WebGL light rays animation with mouse interaction",
+      "Smooth drag-and-drop project cards with physics",
+      "Responsive design with mobile-optimized interactions",
+      "Interactive tech stack carousel with hover effects",
+      "Dynamic project filtering and categorization",
+      "Contact form with AWS Lambda serverless backend",
+    ],
+    challenges:
+      "Implementing performant animations while maintaining 60fps, creating intuitive mobile swipe interactions, and optimizing bundle size for fast loading across devices.",
+    results:
+      "Created a highly engaging portfolio that demonstrates both frontend development skills and system design thinking, with smooth animations and professional UX that showcases technical expertise effectively.",
+    githubUrl: "https://github.com/m0hamed541/my-portfolio",
+    imageUrl: "",
+  },
+
+  {
+    id: 4,
+    section: "dev",
+    title: "Flashcards Mobile Learning App",
+    category: "Mobile Development",
+    duration: "1 month",
+    team: "Solo Project",
+    technologies: [
+      "React Native",
+      "Expo",
+      "TinyBase",
+      "NativeWind",
+      "AsyncStorage",
+    ],
+    overview:
+      "Built a modern flashcard application for IT students with category management, deck organization, and progress tracking using local-first architecture.",
+    features: [
+      "Category management with custom color coding",
+      "Deck creation and organization within categories",
+      "Interactive flashcard study sessions",
+      "Progress tracking with statistics and achievements",
+      "Offline-first with AsyncStorage persistence",
+      "Clean, minimalist UI with smooth navigation",
+    ],
+    challenges:
+      "Implementing efficient local data persistence with TinyBase while maintaining reactive UI updates and ensuring data consistency across app restarts.",
+    results:
+      "Created a comprehensive learning tool with intuitive UX, demonstrating proficiency in React Native state management and local-first mobile architecture patterns.",
+    githubUrl: "https://github.com/m0hamed541/flashcards",
+    imageUrl:
+      "https://my-portfolio-bucket-30-08-25.s3.eu-north-1.amazonaws.com/images/screenshots.png",
+  },
+];
+
+export const projectSections = [
+  {
+    id: "system-design",
+    label: "System Design",
     icon: <Settings className="w-5 h-5" />,
-    description: 'Designing scalable, reliable, and efficient system architectures',
-    projects: [
-      {
-        id: 0,
-        title: 'Distributed System Architecture',
-        description: 'High-performance distributed system design with microservices, load balancing, and fault tolerance mechanisms.',
-        techStack: ['Service mesh', 'Load balancing', 'Circuit breakers'],
-        link: '/projects/distributed-system.json'
-      },
-      {
-        id: 1,
-        title: 'Database Design & Optimization',
-        description: 'Advanced database architecture with sharding, replication, and query optimization strategies.',
-        techStack: ['Database sharding', 'Replication', 'Query optimization'],
-        link: 'https://github.com/m0hamed541/database-design'
-      },
-      {
-        id: 2,
-        title: 'API Gateway Implementation',
-        description: 'Robust API gateway design with authentication, rate limiting, and caching strategies.',
-        techStack: ['API gateway', 'Authentication', 'Rate limiting'],
-        link: 'https://github.com/m0hamed541/api-gateway'
-      },
-      {
-        id: 3,
-        title: 'Service Mesh Implementation',
-        description: 'Advanced service mesh architecture for microservices with traffic management, security, and observability features.',
-        techStack: ['Service mesh', 'Traffic management', 'Security policies'],
-        link: 'https://github.com/m0hamed541/service-mesh'
-      }
-    ]
+    description:
+      "Designing scalable, reliable, and efficient system architectures",
   },
   {
-    id: 'cloud-architecting',
-    label: 'Cloud Architecting',
+    id: "cloud-architecting",
+    label: "Cloud Architecting",
     icon: <Cloud className="w-5 h-5" />,
-    description: 'Building robust cloud-native solutions across multiple platforms',
-    projects: [
-      {
-        id: 0,
-        title: 'Multi-Cloud Infrastructure',
-        description: 'Hybrid cloud solution spanning AWS, Azure, and GCP with unified management and monitoring.',
-        techStack: ['Multi-cloud deployment', 'Unified monitoring', 'Cost optimization'],
-        link: 'https://github.com/m0hamed541/multi-cloud'
-      },
-      {
-        id: 1,
-        title: 'Container Orchestration Platform',
-        description: 'Enterprise-grade Kubernetes platform with advanced networking, security, and monitoring capabilities.',
-        techStack: ['Kubernetes', 'Service mesh', 'Security policies'],
-        link: 'https://github.com/m0hamed541/k8s-platform'
-      }
-    ]
+    description:
+      "Building robust cloud-native solutions across multiple platforms",
   },
   {
-    id: 'problem-solving',
-    label: 'Problem Solving',
+    id: "problem-solving",
+    label: "Problem Solving",
     icon: <Target className="w-5 h-5" />,
-    description: 'Solving complex technical challenges with innovative approaches',
-    projects: [
-      {
-        id: 0,
-        title: 'Algorithm Optimization Engine',
-        description: 'High-performance algorithm library with optimization techniques for complex computational problems.',
-        techStack: ['Algorithm optimization', 'Performance analysis', 'Benchmarking'],
-        link: 'https://github.com/m0hamed541/algo-engine'
-      },
-      {
-        id: 1,
-        title: 'System Performance Analyzer',
-        description: 'Comprehensive system analysis tool for identifying bottlenecks and optimizing resource utilization.',
-        techStack: ['Performance profiling', 'Bottleneck detection', 'Resource optimization'],
-        link: 'https://github.com/m0hamed541/performance-analyzer'
-      }
-    ]
+    description:
+      "Solving complex technical challenges with innovative approaches",
   },
   {
-    id: 'dev',
-    label: 'Dev',
+    id: "dev",
+    label: "Dev",
     icon: <Code className="w-5 h-5" />,
-    description: 'Developing full-stack applications with modern technologies',
-    projects: [
-      {
-        id: 0,
-        title: 'Full-Stack Web Application',
-        description: 'Modern web application with React frontend, Node.js backend, and PostgreSQL database.',
-        techStack: ['React', 'Node.js', 'PostgreSQL', 'Docker'],
-        link: 'https://github.com/m0hamed541/fullstack-app'
-      },
-      {
-        id: 1,
-        title: 'API Gateway & Services',
-        description: 'Scalable API gateway with authentication, rate limiting, and service discovery capabilities.',
-        techStack: ['API gateway', 'Authentication', 'Rate limiting'],
-        link: 'https://github.com/m0hamed541/api-gateway'
-      }
-    ]
-  }
+    description: "Developing full-stack applications with modern technologies",
+  },
 ];

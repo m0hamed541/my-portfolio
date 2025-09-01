@@ -14,7 +14,8 @@ import {
 
 import "../../styles/lightbox.css";
 
-const LightBox = ({ isOpen, setIsOpen, project }) => {
+const LightBox = ({ project, isOpen, setIsOpen }) => {
+  console.log("LightBox Project:", project);
   const isMobile = window.innerWidth <= 768;
   const [selectedProject, setSelectedProject] = useState(0);
 
@@ -185,10 +186,18 @@ const LightBox = ({ isOpen, setIsOpen, project }) => {
           <div className="flex-1 min-h-[200px] sm:min-h-[300px] rounded-lg border-2 border-gray-200 p-3 sm:p-4 overflow-auto">
             {/* Placeholder for architecture diagram */}
             <div className="w-full h-full flex items-center justify-center text-gray-500">
-              <div className="text-center">
-                <Globe size={48} className="mx-auto mb-2 opacity-50" />
-                <p className="text-sm">Architecture diagram goes here</p>
-              </div>
+              {project.imageUrl ? (
+                <img
+                  src={project.imageUrl}
+                  alt="Architecture Diagram"
+                  className="max-w-full max-h-full"
+                />
+              ) : (
+                <div className="text-center">
+                  <Globe size={48} className="mx-auto mb-2 opacity-50" />
+                  <p className="text-sm">Architecture diagram goes here</p>
+                </div>
+              )}
             </div>
           </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Code } from 'lucide-react';
 
 
-export function ProjectCard({ title, description, features, accentColor, link, onClick}) {
+export function ProjectCard({ title, overview, onClick }) {
   return (
     <div className="relative bg-gradient-to-br from-primary-background
     via-primary-background to-secondary-background/5 rounded-xl p-4 sm:p-6
@@ -17,8 +17,8 @@ export function ProjectCard({ title, description, features, accentColor, link, o
         </div>
       </div>
 
-      {/* Description */}
-      <p className="text-sm sm:text-base text-primary-text-secondary mb-4 sm:mb-6 leading-relaxed">{description}</p>
+      {/* overview */}
+      <p className="text-sm sm:text-base text-primary-text-secondary mb-4 sm:mb-6 leading-relaxed">{overview}</p>
 
 
     </div>
