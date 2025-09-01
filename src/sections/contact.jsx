@@ -167,7 +167,7 @@ const ContactSection = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex-row items-center justify-center gap-2"
+                  className="w-full flex-row flex items-center justify-center gap-2"
                 >
                   <Send className="w-4 h-4" />
                   {isSubmitting ? "Sending..." : "Send Message"}

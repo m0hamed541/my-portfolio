@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { ProjectCard } from "../components/ProjectCard";
+import { ProjectCard } from "../components/ProjectCard.jsx";
 import { ProjectsSelector } from "../components/ProjectsSelector";
-import { projectSections } from "../data/projects";
+import { projectSections } from "../data/projects.jsx";
 import { Code } from "lucide-react";
 import { SectionHeader } from "../components/sectionHeader";
 import ProjectsSwiper from "../components/ProjectSwiper";
 
 const ProjectsSection = () => {
-  const [activeSection, setActiveSection] = useState("system-design");
+  const [activeSection, setActiveSection] = useState("cloud-architecting");
 
   const isMobile = window.innerWidth <= 768;
 

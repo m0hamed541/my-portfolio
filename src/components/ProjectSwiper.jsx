@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useMemo, useCallback } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { ProjectCard } from "./ProjectCard";
-import { featureIcons } from "../data/projects";
 import { Code } from "lucide-react";
 
 const Card = React.memo(({ project, cardIndex, onRemove }) => {

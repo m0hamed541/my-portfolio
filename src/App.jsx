@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import HeroSection from "./sections/hero.jsx";
 import Footer from "./sections/footer.tsx";
 import AboutSection from "./sections/about.tsx";
-import ProjectsSection from "./sections/projects.tsx";
+import ProjectsSection from "./sections/projects.jsx";
 import ContactSection from "./sections/contact.jsx";
 import TechStack from "./sections/techStack.jsx";
 import { motion, useMotionValue, useSpring } from "framer-motion";
@@ -44,6 +44,7 @@ function App() {
 
   return (
     <>
+    
       {/* Custom Cursor */}
       {!isMobile && (
         <motion.div
